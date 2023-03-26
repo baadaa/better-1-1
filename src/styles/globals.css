@@ -1,0 +1,151 @@
+:root {
+  --max-width: 1500px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --base-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 3px 7px 15px rgba(0, 0, 0, 0.1),
+    -1px 3px 25px rgba(0, 0, 0, 0.1);
+  --cyan900: #0a2129;
+  --cyan800: #154251;
+  --cyan700: #1f637a;
+  --cyan600: #2984a3;
+  --cyan500: #34a5cb;
+  --cyan400: #5cb7d6;
+  --cyan300: #85c9e0;
+  --cyan200: #aedbea;
+  --cyan100: #d6edf5;
+  --cyan50: #ebf6fa;
+  --green900: #18260d;
+  --green800: #304c1a;
+  --green700: #487227;
+  --green600: #609834;
+  --green500: #79bf42;
+  --green400: #93cb67;
+  --green300: #aed88d;
+  --green200: #c9e5b3;
+  --green100: #e4f2d9;
+  --green50: #f1f9ec;
+  --yellow900: #302303;
+  --yellow800: #5f4707;
+  --yellow700: #8f6a0a;
+  --yellow600: #bf8e0d;
+  --yellow500: #efb212;
+  --yellow400: #f2c140;
+  --yellow300: #f5d070;
+  --yellow200: #f8e0a0;
+  --yellow100: #fcefcf;
+  --yellow50: #fdf7e7;
+  --red900: #260d11;
+  --red800: #4d1922;
+  --red700: #732634;
+  --red600: #9a3245;
+  --red500: #c03f56;
+  --red400: #cd6578;
+  --red300: #d98c9a;
+  --red200: #e6b2bb;
+  --red100: #f2d9dd;
+  --red50: #f9ecee;
+  --coolGray900: #17181C;
+  --coolGray800: #2D2F39;
+  --coolGray700: #444755;
+  --coolGray600: #5A5E72;
+  --coolGray500: #71768E;
+  --coolGray400: #8D91A5;
+  --coolGray300: #AAADBB;
+  --coolGray200: #C6C8D2;
+  --coolGray100: #E3E4E8;
+  --coolGray50: #F1F1F4;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  position: relative;
+  padding: 0 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: inherit;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  color: var(--coolGray900);
+  --body-bg: var(--coolGray50);
+  --onboardingBg: var(--green500);
+  --onboardingText: white;
+  --weeklyBg: var(--cyan800);
+  --weeklyText: white;
+  --growthBg: var(--yellow700);
+  --growthText: white;
+  --goalsBg: var(--coolGray600);
+  --goalsText: white;
+  --teamworkBg: var(--cyan600);
+  --teamworkText: white;
+  --wellbeingBg: var(--green800);
+  --wellbeingText: white;
+  --feedbackBg: var(--yellow500);
+  --feedbackText: white;
+
+
+  background-color: var(--body-bg);
+  transition: all .2s;
+}
+
+body.dark {
+  --body-bg: var(--coolGray900);
+
+}
+a {
+  color: inherit;
+}
+aside {
+  position: sticky;
+  top: 2rem;
+}
+h1 {
+  margin:0;
+  padding:0;
+  color: var(--page-heading-color);
+  line-height: 1.6;
+  font-size: 3.6rem;
+  font-weight: 400;
+  z-index: 9;
+}
+
+h1 span {
+  display: block;
+  color: var(--page-subheading-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .35em;
+  font-size: .41em;
+}
+@media (prefers-color-scheme: dark) {
+  /* html {
+    color-scheme: dark;
+  } */
+}
