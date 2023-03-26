@@ -2,14 +2,14 @@ import { Item } from '@/types';
 
 export const itemPool: Array<Item> = [
   {
-    content: `How can we measure the impact of what you've done, so we know it's been successful?`,
+    content: `What do you need to achieve your goals for the next period?`,
     category: 'Goals',
     tags: ['Goals', 'Feedback', 'Teamwork'],
   },
   {
-    content: `What do you need to achieve your goals for the next period?`,
-    category: 'Goals',
-    tags: ['Goals', 'Feedback', 'Teamwork'],
+    content: `Are you happy with how we communicate? Should it be more or less? Should it be in a different format?`,
+    category: 'Feedback',
+    tags: ['Feedback', 'Career Growth', 'Weekly'],
   },
   {
     content: `What do you want to achieve in the next period`,
@@ -87,9 +87,9 @@ export const itemPool: Array<Item> = [
     tags: ['Goals', 'Feedback', 'Teamwork'],
   },
   {
-    content: `Are you happy with how we communicate? Should it be more or less? Should it be in a different format?`,
-    category: 'Feedback',
-    tags: ['Feedback', 'Career Growth', 'Weekly'],
+    content: `How can we measure the impact of what you've done, so we know it's been successful?`,
+    category: 'Goals',
+    tags: ['Goals', 'Feedback', 'Teamwork'],
   },
   {
     content: `Is there anything I do as your manager which you think slows you down?`,

@@ -3,9 +3,12 @@ import { TopicColors } from '@/styles/colorCode';
 import styled from 'styled-components';
 
 const TagStyles = styled.span`
-  padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  border-radius: 2rem;
   display: inline-block;
+  margin-right: 0.5em;
 `;
 
 type TagProps = {
