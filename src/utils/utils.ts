@@ -1,6 +1,7 @@
 import { Item } from '@/types';
 
 export const pickRandomItems = (arr: Array<Item>, n: number) => {
+  // Taken from https://stackoverflow.com/a/19270021/7216508
   var result = new Array(n),
     len = arr.length,
     taken = new Array(len);
@@ -14,6 +15,14 @@ export const pickRandomItems = (arr: Array<Item>, n: number) => {
   return result;
 };
 
+export const shuffleArray = (arr: Array<Item>) => {
+  const temp = [...arr];
+  for (let i = temp.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [temp[i], temp[j]] = [temp[j], temp[i]];
+  }
+  return temp;
+};
 export const setLocalStorage = (key = '', data = ''): void => {
   window.localStorage.setItem(key, data);
 };
