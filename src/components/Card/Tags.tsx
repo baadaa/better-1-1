@@ -17,7 +17,11 @@ type TagProps = {
 
 export const Tag: React.FC<TagProps> = ({ tag }) => (
   <TagStyles
-    style={{ background: TopicColors[tag].bg, color: TopicColors[tag].text }}
+    style={{
+      background: TopicColors[tag].bg,
+      color: TopicColors[tag].text,
+      border: `1px solid ${TopicColors[tag].border}`,
+    }}
   >
     {tag}
   </TagStyles>

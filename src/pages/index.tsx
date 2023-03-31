@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { Card } from '@/components/Card';
+import { CardSet } from '@/components/Card';
 import { Layout } from '@/components/Layout';
 import { pickRandomItems } from '@/utils/utils';
 import { Item } from '@/types';
@@ -20,11 +19,7 @@ export default function Home() {
         <button className="shuffle" onClick={() => shuffleItems()}>
           shuffle
         </button>
-        <div className="cards">
-          {picks.map((item, i) => (
-            <Card key={i} item={item} />
-          ))}
-        </div>
+        <CardSet items={picks} />
       </Layout>
     </>
   );

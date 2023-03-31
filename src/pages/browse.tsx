@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <h1>Browse All Topics</h1>
+        <h1>Browse by Topics</h1>
         <form className="filters" onChange={filterCards}>
           <input type="radio" id="all" name="tag" value="all" />
           <label htmlFor="all">All</label>
@@ -46,6 +46,7 @@ export default function Home() {
             </React.Fragment>
           ))}
         </form>
+        {picks.length}
         <div className="cards">
           {picks.map((item, i) => (
             <Card key={i} item={item} />

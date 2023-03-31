@@ -41,7 +41,7 @@ const Header = () => {
         <ul>
           {[
             { label: "Today's Agenda", link: '/' },
-            { label: 'Browse All', link: '/browse' },
+            { label: 'Browse by Topcs', link: '/browse' },
           ].map((item) => (
             <li key={item.label}>
               <Link

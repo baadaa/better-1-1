@@ -11,24 +11,32 @@ const CardStyles = styled.article<CardStyleProps>`
   flex: 1;
   background-color: #fff;
   font-size: 1.5rem;
-  padding: calc(var(--spacing) * 2) var(--spacing) calc(var(--spacing) * 2.5);
+  display: flex;
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 1)
+    calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5);
   overflow: hidden;
+  align-items: center;
   box-shadow: var(--base-shadow);
-  border-radius: 0.8rem;
+  border-radius: 0.4rem;
   position: relative;
+  border-left: 4px solid ${(props) => props.headText};
   &::before {
     content: attr(data-category);
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0 var(--spacing);
+    padding: 0;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 2.75rem;
-    font-size: 1.5rem;
+    /* left: 0; */
+    right: 2rem;
+    top: 2rem;
+    height: 2rem;
+    font-size: 3rem;
+    opacity: 0.1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     font-weight: 600;
-    background-color: ${(props) => props.headBg};
+    /* background-color: ${(props) => props.headBg}; */
     color: ${(props) => props.headText};
   }
   h2 {
@@ -67,4 +75,17 @@ const Card: React.FC<CardProps> = ({ item }) => {
   );
 };
 
-export { Card };
+type CardSetProps = {
+  items: Array<Item>;
+};
+const CardSet: React.FC<CardSetProps> = ({ items }) => {
+  return (
+    <div className="cards">
+      {items.map((item, i) => (
+        <Card key={i} item={item} />
+      ))}
+    </div>
+  );
+};
+
+export { Card, CardSet };
