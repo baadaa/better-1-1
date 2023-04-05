@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1200px;
+  --max-width: 1600px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -155,41 +155,27 @@ body {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   color: var(--coolGray900);
   --body-bg: var(--cool50);
-  --onboardingBg: var(--grass600);
-  --onboardingText: white;
   --onboardingBg: var(--grass100);
   --onboardingText: var(--grass700);
   --onboardingBorder: var(--grass300);
-  --weeklyBg: var(--sky700);
-  --weeklyText: white;
-  --weeklyBg: var(--sky100);
+  --weeklyBg: var(--sky50);
   --weeklyText: var(--sky700);
   --weeklyBorder: var(--sky300);
-  --growthBg: var(--tomato600);
-  --growthText: white;
-  --growthBg: var(--tomato100);
+  --growthBg: var(--tomato50);
   --growthText: var(--tomato600);
   --growthBorder: var(--tomato300);
-  --goalsBg: var(--cool600);
-  --goalsText: white;
-  --goalsBg: var(--cool100);
+  --goalsBg: var(--cool50);
   --goalsText: var(--cool600);
   --goalsBorder: var(--cool300);
-  --teamworkBg: var(--orange600);
-  --teamworkText: white;
-  --teamworkBg: var(--orange100);
+  --teamworkBg: var(--orange50);
   --teamworkText: var(--orange600);
   --teamworkBorder: var(--orange300);
-  --wellbeingBg: var(--grass800);
-  --wellbeingText: white;
-  --wellbeingBg: var(--grass100);
+  --wellbeingBg: var(--grass50);
   --wellbeingText: var(--grass800);
   --wellbeingBorder: var(--grass300);
-  --feedbackBg: var(--lemon500);
-  --feedbackText: var(--lemon900);
-  --feedbackBg: var(--lemon100);
-  --feedbackText: var(--lemon700);
-  --feedbackBorder: var(--lemon300);
+  --feedbackBg: var(--plum50);
+  --feedbackText: var(--plum500);
+  --feedbackBorder: var(--plum300);
 
   --current-route: var(--lemon500);
   background-color: var(--body-bg);

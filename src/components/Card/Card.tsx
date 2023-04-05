@@ -12,7 +12,7 @@ const CardStyles = styled.article<CardStyleProps>`
   background-color: #fff;
   font-size: 1.5rem;
   display: flex;
-  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 1)
+  padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5)
     calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5);
   overflow: hidden;
   align-items: center;
@@ -28,14 +28,14 @@ const CardStyles = styled.article<CardStyleProps>`
     padding: 0;
     position: absolute;
     /* left: 0; */
-    right: 2rem;
-    top: 2rem;
+    /* right: 2.5rem; */
+    top: 2.5rem;
     height: 2rem;
-    font-size: 3rem;
-    opacity: 0.1;
+    font-size: 1.6rem;
+    opacity: 0.35;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
+    letter-spacing: 0.45em;
+    font-weight: 700;
     /* background-color: ${(props) => props.headBg}; */
     color: ${(props) => props.headText};
   }
@@ -43,12 +43,12 @@ const CardStyles = styled.article<CardStyleProps>`
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: -0.015em;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .tags {
     position: absolute;
-    bottom: 1.5rem;
-    left: var(--spacing);
+    bottom: calc(var(--spacing) * 0.75);
+    left: calc(var(--spacing) * 1.5);
   }
 `;
 
