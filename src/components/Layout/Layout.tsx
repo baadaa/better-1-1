@@ -16,6 +16,24 @@ const LayoutStyles = styled.div`
   .shuffle {
     display: block;
     margin: 1rem auto 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: var(--main-button);
+    text-transform: capitalize;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    &:hover {
+      background-color: var(--main-button-hover);
+      transform: translateY(-0.15rem);
+      box-shadow: var(--hover-shadow);
+    }
+    &:focus {
+      outline: 3px solid var(--sky200);
+      outline-offset: 2px;
+    }
   }
   .cards {
     display: grid;

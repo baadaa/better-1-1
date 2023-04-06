@@ -3,16 +3,38 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const HeaderStyles = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--max-width);
-  margin: 0 auto 2rem;
-  a {
-    text-decoration: none;
-    display: inline-flex;
-    padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: var(--header-bg);
+  box-shadow: var(--base-shadow);
+  .wrapper {
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  li {
     border-bottom: 5px solid transparent;
+    display: inline-flex;
+    align-items: stretch;
+  }
+  a {
+    padding: 2rem 1rem;
+    text-decoration: none;
+    /* padding: 1.5rem 0 */
+    outline: none;
+    transition: transform 0.2s;
+    &:focus {
+      outline: 3px solid var(--sky200);
+    }
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
   }
   li + li {
     margin-left: 2rem;
@@ -28,6 +50,10 @@ const HeaderStyles = styled.header`
   }
   h3 {
     font-size: 3rem;
+    /* margin: 2rem 0; */
+  }
+  nav {
+    align-self: center;
   }
 `;
 
@@ -36,24 +62,24 @@ const Header = () => {
   const currentRoute = router.pathname;
   return (
     <HeaderStyles>
-      <h3>Better 1:1</h3>
-      <nav>
-        <ul>
-          {[
-            { label: "Today's Agenda", link: '/' },
-            { label: 'Browse by Topcs', link: '/browse' },
-          ].map((item) => (
-            <li key={item.label}>
-              <Link
-                href={item.link}
+      <div className="wrapper">
+        <h3>Better 1:1</h3>
+        <nav>
+          <ul>
+            {[
+              { label: "Today's Agenda", link: '/' },
+              { label: 'Browse by Topcs', link: '/browse' },
+            ].map((item) => (
+              <li
+                key={item.label}
                 className={currentRoute === item.link ? 'active' : ''}
               >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+                <Link href={item.link}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </HeaderStyles>
   );
 };

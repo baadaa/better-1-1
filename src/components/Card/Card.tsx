@@ -27,8 +27,6 @@ const CardStyles = styled.article<CardStyleProps>`
     align-items: center;
     padding: 0;
     position: absolute;
-    /* left: 0; */
-    /* right: 2.5rem; */
     top: 2.5rem;
     height: 2rem;
     font-size: 1.6rem;
@@ -36,7 +34,6 @@ const CardStyles = styled.article<CardStyleProps>`
     text-transform: uppercase;
     letter-spacing: 0.45em;
     font-weight: 700;
-    /* background-color: ${(props) => props.headBg}; */
     color: ${(props) => props.headText};
   }
   h2 {

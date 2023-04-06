@@ -17,7 +17,7 @@ export default function Home() {
       <Layout>
         <h1>Today’s Agenda</h1>
         <button className="shuffle" onClick={() => shuffleItems()}>
-          shuffle
+          shuffle cards
         </button>
         <CardSet items={picks} />
       </Layout>

@@ -142,7 +142,7 @@ html {
 body {
   margin: 0;
   position: relative;
-  padding: 0 1.5rem;
+  padding: 10rem 1.5rem 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: inherit;
@@ -155,6 +155,7 @@ body {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   color: var(--coolGray900);
   --body-bg: var(--cool50);
+  --header-bg: #fff;
   --onboardingBg: var(--grass100);
   --onboardingText: var(--grass700);
   --onboardingBorder: var(--grass300);
@@ -178,6 +179,12 @@ body {
   --feedbackBorder: var(--plum300);
 
   --current-route: var(--lemon500);
+  --main-button: var(--lemon500);
+  --main-button-hover: var(--lemon400);
+
+  --pill-border: var(--lemon500);
+  --pill-bg: white;
+  --pill-active-bg: var(--lemon200);
   background-color: var(--body-bg);
   transition: all .2s;
 }
@@ -196,20 +203,27 @@ aside {
 h1 {
   margin:0;
   padding:0;
-  color: var(--page-heading-color);
   line-height: 1.6;
   font-size: 3.6rem;
   font-weight: 400;
   z-index: 9;
 }
-
 h1 span {
-  display: block;
-  color: var(--page-subheading-color);
-  text-transform: uppercase;
+  font-size: .6em;
+  font-style: italic;
+  letter-spacing: .15em;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+h3 span {
+  text-transform: capitalize;
   font-weight: 600;
-  letter-spacing: .35em;
-  font-size: .41em;
 }
 @media (prefers-color-scheme: dark) {
   /* html {
