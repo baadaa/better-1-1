@@ -205,8 +205,8 @@ body {
   --button-bg-colormode: var(--sky100);
   --button-bg-colormode-border: var(--sky200);
   --button-bg-colormode-hover: var(--sky50);
-  --github: var(--cool900);
-  --about: var(--neutral200);
+  --github: var(--body-bg);
+  --about: var(--neutral500);
 
   background-color: var(--body-bg);
   transition: all .2s;
@@ -259,7 +259,6 @@ body.dark {
   --button-bg-colormode: var(--sky700);
   --button-bg-colormode-border: var(--sky600);
   --button-bg-colormode-hover: var(--sky600);
-  --github: var(--cool900);
   --about: var(--cool700);
 
 }

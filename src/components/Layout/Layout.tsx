@@ -4,7 +4,7 @@ import { Props } from '@/types';
 import { Work_Sans } from '@next/font/google';
 import Header from './Header';
 import styled from 'styled-components';
-import { ColorModeButton, GitHub } from '../Miscellaneous';
+import { ColorModeButton, GitHub } from '../Buttons';
 
 const ws = Work_Sans({ subsets: ['latin'], display: 'swap' });
 const LayoutStyles = styled.div`
