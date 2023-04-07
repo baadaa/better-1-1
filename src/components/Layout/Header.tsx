@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { ToggleBtn } from '../Buttons';
+import { AboutButton, AboutNotes } from '../About/About';
 
 const HeaderStyles = styled.header`
   position: fixed;
@@ -56,6 +57,8 @@ const HeaderStyles = styled.header`
   h3 {
     font-size: 3rem;
     margin: 0;
+    display: flex;
+    align-items: center;
   }
   nav {
     align-self: center;
@@ -109,10 +112,21 @@ const Header = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [aboutNoteShown, setAboutNoteShown] = useState(false);
   return (
     <HeaderStyles>
       <div className="wrapper">
-        <h3>Better 1:1</h3>
+        <h3>
+          Better 1:1
+          <AboutButton
+            isActive={aboutNoteShown}
+            setIsActive={setAboutNoteShown}
+          />
+          <AboutNotes
+            isActive={aboutNoteShown}
+            setIsActive={setAboutNoteShown}
+          />
+        </h3>
         <nav>
           <ul>
             {[
