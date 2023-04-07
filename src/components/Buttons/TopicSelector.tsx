@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 
 const Selector = styled.form`
+  position: sticky;
+  z-index: 5;
+  padding: 1.5rem 0;
+  top: var(--header-height);
+  background: var(--body-bg);
   box-sizing: border-box;
   display: flex;
-  margin: 1rem auto 2rem;
+  margin: 0 auto 1rem;
   justify-content: center;
   flex-wrap: wrap;
   .dropdown {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     font-size: 1.5rem;
     display: none;
@@ -19,6 +25,7 @@ const Selector = styled.form`
     padding: 0.6rem 1.2rem;
     font-size: 1.6rem;
     flex: 1;
+    max-width: 20rem;
     margin-left: 0.6rem;
     outline: none;
     &:focus {
@@ -32,6 +39,15 @@ const Selector = styled.form`
     }
     .pills {
       display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .dropdown {
+      font-size: 1.2rem;
+    }
+    select {
+      font-size: 1.4rem;
+      max-width: 15rem;
     }
   }
 `;

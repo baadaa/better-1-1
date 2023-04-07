@@ -1,5 +1,4 @@
 import React, { useState, useEffect, FormEvent } from 'react';
-import styled from 'styled-components';
 import { Card } from '@/components/Card';
 import { Layout } from '@/components/Layout';
 import { Item, Category } from '@/types';
