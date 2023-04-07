@@ -5,11 +5,11 @@ const Notes = styled.div`
   position: fixed;
   z-index: 90;
   border-radius: 1rem;
-  top: var(--header-height);
+  top: calc(var(--header-height) - 0.75rem);
   left: 3rem;
   width: 29rem;
   box-shadow: var(--hover-shadow);
-  border: 1px solid var(--cool600);
+  border: 1px solid var(--cool700);
   background-color: rgba(0, 10, 20, 0.95);
   color: var(--neutral200);
   font-size: 1.3rem;

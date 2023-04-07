@@ -23,6 +23,7 @@ const GitHubLink = styled.a`
     fill: var(--about);
     color: var(--github);
     border: 0;
+    transition: fill 0.2s, color 0.2s;
     /* filter: drop-shadow(0px -1px 9px rgba(0, 0, 0, 0.25)); */
   }
   @keyframes octocat-wave {

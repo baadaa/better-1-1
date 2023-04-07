@@ -11,6 +11,7 @@ const Selector = styled.form`
   margin: 0 auto 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  transition: background 0.2s;
   .dropdown {
     display: flex;
     align-items: center;
@@ -63,7 +64,7 @@ const PillStyles = styled.label`
   border-radius: 0.6rem;
   font-weight: 500;
   display: flex;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
   text-transform: capitalize;
   cursor: pointer;
   input[type='radio'] {

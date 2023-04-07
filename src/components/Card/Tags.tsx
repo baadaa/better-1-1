@@ -9,6 +9,7 @@ const TagStyles = styled.span`
   border-radius: 2rem;
   display: inline-block;
   margin-right: 0.5em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 `;
 
 type TagProps = {

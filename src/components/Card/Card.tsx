@@ -20,6 +20,7 @@ const CardStyles = styled.article<CardStyleProps>`
   border-radius: 0.4rem;
   position: relative;
   border-left: 4px solid ${(props) => props.cardBorder};
+  transition: background-color 0.2s;
   &::before {
     content: attr(data-category);
     display: flex;
@@ -30,6 +31,7 @@ const CardStyles = styled.article<CardStyleProps>`
     top: 2.5rem;
     font-size: 1.6rem;
     opacity: 0.35;
+    transition: color 0.2s;
     text-transform: uppercase;
     letter-spacing: 0.45em;
     font-weight: 700;
