@@ -153,12 +153,16 @@ body {
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  color: var(--coolGray900);
+  color: var(--cool900);
   --body-bg: var(--cool50);
   --header-bg: #fff;
-  --onboardingBg: var(--grass100);
-  --onboardingText: var(--grass700);
-  --onboardingBorder: var(--grass300);
+  --header-border: var(--cool100);
+  --header-height: 6.8rem;
+
+  --card-bg: #fff;
+  --onboardingBg: var(--berry50);
+  --onboardingText: var(--berry700);
+  --onboardingBorder: var(--berry300);
   --weeklyBg: var(--sky50);
   --weeklyText: var(--sky700);
   --weeklyBorder: var(--sky300);
@@ -185,12 +189,65 @@ body {
   --pill-border: var(--lemon500);
   --pill-bg: white;
   --pill-active-bg: var(--lemon200);
+  --pill-text: var(--cool900);
+  --pill-active-text: var(--cool900);
+
+  --dropdown-border: var(--cool400);
+  --colormode-sun: var(--sky500);
+  --colormode-moon: var(--sky300);
+  --button-bg-colormode: var(--sky100);
+  --button-bg-colormode-border: var(--sky200);
+  --button-bg-colormode-hover: var(--sky50);
+  --github: var(--cool900);
+  --about: var(--neutral200);
+
   background-color: var(--body-bg);
   transition: all .2s;
 }
 
 body.dark {
+  color: #ddd;
   --body-bg: var(--cool900);
+  --header-bg: var(--cool800);
+  --header-border: var(--cool700);
+
+  --card-bg: var(--cool800);
+  --onboardingBg: var(--berry800);
+  --onboardingText: var(--berry400);
+  --onboardingBorder: var(--berry700);
+  --weeklyBg: var(--sky800);
+  --weeklyText: var(--sky400);
+  --weeklyBorder: var(--sky700);
+  --growthBg: var(--tomato800);
+  --growthText: var(--tomato400);
+  --growthBorder: var(--tomato700);
+  --goalsBg: var(--cool800);
+  --goalsText: var(--cool400);
+  --goalsBorder: var(--cool700);
+  --teamworkBg: var(--orange800);
+  --teamworkText: var(--orange400);
+  --teamworkBorder: var(--orange700);
+  --wellbeingBg: var(--grass800);
+  --wellbeingText: var(--grass400);
+  --wellbeingBorder: var(--grass700);
+  --feedbackBg: var(--plum800);
+  --feedbackText: var(--plum400);
+  --feedbackBorder: var(--plum700);
+
+  --pill-border: var(--lemon700);
+  --pill-bg: var(--lemon900);
+  --pill-active-bg: var(--lemon500);
+  --pill-text: white;
+  --pill-active-text: var(--lemon900);
+
+  --colormode-sun: var(--lemon300);
+  --colormode-moon: var(--lemon500);
+  --button-bg-colormode: var(--sky700);
+  --button-bg-colormode-border: var(--sky600);
+  --button-bg-colormode-hover: var(--sky600);
+  --github: var(--cool900);
+  --about: var(--cool700);
+
 
 }
 a {

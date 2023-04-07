@@ -9,7 +9,7 @@ type CardStyleProps = {
 const CardStyles = styled.article<CardStyleProps>`
   --spacing: 3rem;
   flex: 1;
-  background-color: #fff;
+  background-color: var(--card-bg);
   font-size: 1.5rem;
   display: flex;
   padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5)

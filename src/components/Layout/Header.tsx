@@ -7,11 +7,14 @@ const HeaderStyles = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 10;
+  height: var(--header-height);
   background-color: var(--header-bg);
   box-shadow: var(--base-shadow);
+  transition: background-color 0.2s, border-color 0.2s;
+  border-bottom: 1px solid var(--header-border);
   .wrapper {
-    padding: 0 1.5rem;
+    padding: 0 0 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +53,7 @@ const HeaderStyles = styled.header`
   }
   h3 {
     font-size: 3rem;
-    /* margin: 2rem 0; */
+    margin: 0;
   }
   nav {
     align-self: center;
@@ -67,8 +70,8 @@ const Header = () => {
         <nav>
           <ul>
             {[
-              { label: "Today's Agenda", link: '/' },
-              { label: 'Browse by Topcs', link: '/browse' },
+              { label: "Today's Picks", link: '/' },
+              { label: 'Browse by Topics', link: '/browse' },
             ].map((item) => (
               <li
                 key={item.label}
