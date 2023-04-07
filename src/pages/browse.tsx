@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title="Browse by Topics">
         <h1>Browse by Topics</h1>
         <Selector onChange={filterCards}>
           <Pill tag="all" active={filter === 'all'} />

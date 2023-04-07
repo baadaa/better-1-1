@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Head from 'next/head';
 import { Props } from '@/types';
 import { Work_Sans } from '@next/font/google';
+import { Metadata } from './Metadata';
 import Header from './Header';
 import styled from 'styled-components';
 import { ColorModeButton, GitHub } from '../Buttons';
@@ -69,7 +69,9 @@ const LayoutStyles = styled.div`
     }
   }
 `;
-export const Layout: React.FC<Props> = ({ children }) => {
+type LayoutProps = Props & { title: string };
+
+export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   const { theme, setTheme } = useTheme();
   const toggleColor = () => {
     const target = theme === Theme.Dark ? Theme.Light : Theme.Dark;
@@ -78,34 +80,12 @@ export const Layout: React.FC<Props> = ({ children }) => {
   };
   return (
     <>
-      <Head>
-        <title>Better One-on-One</title>
-        <meta name="description" content="Better One-on-One" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="One-on-one meeting discussion prompts based on The Unstuck Box"
-        />
-        <meta name="og:title" content="Better One-on-One" />
-        <meta name="twitter:title" content="Better One-on-One" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="Bumhan Yu<bumhan.yu@gmail.com>" />
-        <meta name="og:type" content="website" />
-        <meta
-          name="og:image"
-          content="https://syntax.bald.design/og-image-syntax.jpg"
-        />
-        <meta
-          name="og:description"
-          content="One-on-one meeting discussion prompts based on The Unstuck Box"
-        />
-        <meta
-          name="twitter:description"
-          content="One-on-one meeting discussion prompts based on The Unstuck Box"
-        />
-
-        <link rel="icon" href="/barbecue.png" />
-      </Head>
+      <Metadata
+        title={`Better 1:1 - ${title}`}
+        description="One-on-one meeting discussion prompts based on The Unstuck Box"
+        ogImage="https://res.cloudinary.com/dm4tymaa3/image/upload/v1680876353/og-image-better_falja6.png"
+        favicon="/favicon.png"
+      />
       <Header />
       <GitHub />
       <ColorModeButton onClick={toggleColor} />

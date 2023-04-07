@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title="Today's Picks">
         <h1>Today’s Picks</h1>
         <button className="shuffle" onClick={() => shuffleItems()}>
           shuffle cards
