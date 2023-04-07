@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { ToggleBtn } from '../Buttons';
 
 const HeaderStyles = styled.header`
   position: fixed;
@@ -58,11 +60,55 @@ const HeaderStyles = styled.header`
   nav {
     align-self: center;
   }
+  .mobile {
+    position: absolute;
+    top: var(--header-height);
+    border-radius: 1rem;
+    box-shadow: var(--hover-shadow);
+    right: 0rem;
+    background: var(--header-bg);
+    font-size: 1.6rem;
+    transform: translateY(-2rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s, transform 0.4s;
+    padding: 2.5rem 0;
+    a {
+      width: 20rem;
+      padding: 1rem 2.5rem;
+      display: block;
+      padding-left: 2rem;
+      border-left: 6px solid transparent;
+      &.active {
+        border-left-color: var(--current-route);
+      }
+    }
+    a + a {
+      margin-top: 2rem;
+    }
+    &[data-open='true'] {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    .wrapper {
+      width: 100%;
+      /* align-items: center; */
+    }
+    nav {
+      display: none;
+    }
+  }
 `;
 
 const Header = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
+  const [isCollapsed, setIsCollapsed] = useState(true);
   return (
     <HeaderStyles>
       <div className="wrapper">
@@ -82,6 +128,35 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+        <ToggleBtn>
+          <button
+            className={
+              !isCollapsed
+                ? 'hamburger hamburger--spring is-active'
+                : 'hamburger hamburger--spring'
+            }
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            type="button"
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+          <div className="mobile" data-open={!isCollapsed}>
+            {[
+              { label: "Today's Picks", link: '/' },
+              { label: 'Browse by Topics', link: '/browse' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.link}
+                className={currentRoute === item.link ? 'active' : ''}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </ToggleBtn>
       </div>
     </HeaderStyles>
   );

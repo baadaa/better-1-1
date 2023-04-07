@@ -34,6 +34,7 @@ const Selector = styled.form`
     }
   }
   @media screen and (max-width: 768px) {
+    margin-bottom: 0;
     .dropdown {
       display: flex;
     }
