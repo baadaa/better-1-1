@@ -13,6 +13,8 @@ const LayoutStyles = styled.div`
   h1 {
     text-align: center;
     letter-spacing: -0.03em;
+    font-size: 3.6rem;
+    font-weight: 400;
   }
   .shuffle {
     display: block;
@@ -43,13 +45,24 @@ const LayoutStyles = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 1100px) {
+    h1 {
+      font-size: 3.2rem;
+    }
     .cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
     .cards {
       grid-template-columns: auto;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 2.6rem;
     }
   }
 `;

@@ -11,7 +11,6 @@ const CardStyles = styled.article<CardStyleProps>`
   --spacing: 3rem;
   flex: 1;
   background-color: var(--card-bg);
-  font-size: 1.5rem;
   display: flex;
   padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5)
     calc(var(--spacing) * 2.5) calc(var(--spacing) * 1.5);
@@ -29,7 +28,6 @@ const CardStyles = styled.article<CardStyleProps>`
     padding: 0;
     position: absolute;
     top: 2.5rem;
-    height: 2rem;
     font-size: 1.6rem;
     opacity: 0.35;
     text-transform: uppercase;
@@ -47,6 +45,24 @@ const CardStyles = styled.article<CardStyleProps>`
     position: absolute;
     bottom: calc(var(--spacing) * 0.75);
     left: calc(var(--spacing) * 1.5);
+  }
+  @media screen and (max-width: 1100px) {
+    --spacing: 2.3rem;
+    h2 {
+      font-size: 2rem;
+    }
+    &::before {
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    /* --spacing: 2.3rem; */
+    h2 {
+      font-size: 1.8rem;
+    }
+    &::before {
+      font-size: 1.2rem;
+    }
   }
 `;
 
