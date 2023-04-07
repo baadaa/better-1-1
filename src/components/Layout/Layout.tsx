@@ -27,6 +27,7 @@ const LayoutStyles = styled.div`
     cursor: pointer;
     background-color: var(--main-button);
     text-transform: capitalize;
+    color: var(--cool900);
     transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
     &:hover {
       background-color: var(--main-button-hover);

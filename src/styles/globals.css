@@ -142,7 +142,7 @@ html {
 body {
   margin: 0;
   position: relative;
-  padding: 10rem 1.5rem 0;
+  padding: 10rem 1.5rem 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: inherit;

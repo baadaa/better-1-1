@@ -12,7 +12,7 @@ export const itemPool: Array<Item> = [
     tags: ['Goals', 'Feedback', 'Teamwork'],
   },
   {
-    content: `What do you want to achieve in the next period`,
+    content: `What do you want to achieve in the next period?`,
     category: 'Goals',
     tags: ['Goals', 'Feedback', 'Teamwork'],
   },
@@ -576,7 +576,7 @@ export const shuffledPool: Array<Item> = [
     tags: ['Teamwork', 'Career Growth', 'Weekly'],
   },
   {
-    content: 'What do you want to achieve in the next period',
+    content: 'What do you want to achieve in the next period?',
     category: 'Goals',
     tags: ['Goals', 'Feedback', 'Teamwork'],
   },

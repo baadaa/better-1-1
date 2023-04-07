@@ -46,6 +46,12 @@ const CardStyles = styled.article<CardStyleProps>`
     bottom: calc(var(--spacing) * 0.75);
     left: calc(var(--spacing) * 1.5);
   }
+  &[data-big='true'] {
+    height: 400px;
+    h2 {
+      font-size: 3rem;
+    }
+  }
   @media screen and (max-width: 1100px) {
     --spacing: 2.3rem;
     h2 {
@@ -53,6 +59,13 @@ const CardStyles = styled.article<CardStyleProps>`
     }
     &::before {
       font-size: 1.4rem;
+    }
+    &[data-big='true'] {
+      height: auto;
+      grid-column: -1/1;
+      h2 {
+        font-size: 2rem;
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -69,8 +82,9 @@ const CardStyles = styled.article<CardStyleProps>`
 import { Item } from '@/types';
 type CardProps = {
   item: Item;
+  isBig?: boolean;
 };
-const Card: React.FC<CardProps> = ({ item }) => {
+const Card: React.FC<CardProps> = ({ item, isBig }) => {
   const { content, category, tags } = item;
   const headingColor = TopicColors[category];
   return (
@@ -79,6 +93,7 @@ const Card: React.FC<CardProps> = ({ item }) => {
       headBg={headingColor.bg}
       headText={headingColor.text}
       cardBorder={headingColor.cardBorder}
+      data-big={isBig}
     >
       <h2>{content}</h2>
       <div className="tags">
@@ -92,12 +107,13 @@ const Card: React.FC<CardProps> = ({ item }) => {
 
 type CardSetProps = {
   items: Array<Item>;
+  isBig?: boolean;
 };
-const CardSet: React.FC<CardSetProps> = ({ items }) => {
+const CardSet: React.FC<CardSetProps> = ({ items, isBig }) => {
   return (
     <div className="cards">
       {items.map((item, i) => (
-        <Card key={i} item={item} />
+        <Card key={i} item={item} isBig={isBig} />
       ))}
     </div>
   );

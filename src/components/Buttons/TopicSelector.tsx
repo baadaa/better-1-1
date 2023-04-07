@@ -27,6 +27,7 @@ const Selector = styled.form`
     flex: 1;
     max-width: 20rem;
     margin-left: 0.6rem;
+    color: var(--cool900);
     outline: none;
     &:focus {
       outline: 3px solid var(--sky200);

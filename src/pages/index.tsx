@@ -19,7 +19,7 @@ export default function Home() {
         <button className="shuffle" onClick={() => shuffleItems()}>
           shuffle cards
         </button>
-        <CardSet items={picks} />
+        <CardSet items={picks} isBig />
       </Layout>
     </>
   );
