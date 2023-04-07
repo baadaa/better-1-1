@@ -5,6 +5,8 @@ import { Work_Sans } from '@next/font/google';
 import Header from './Header';
 import styled from 'styled-components';
 import { ColorModeButton, GitHub } from '../Buttons';
+import { useTheme, Theme } from '@/contexts/ThemeContext';
+import { toggleColorMode } from '@/utils/utils';
 
 const ws = Work_Sans({ subsets: ['latin'], display: 'swap' });
 const LayoutStyles = styled.div`
@@ -68,8 +70,12 @@ const LayoutStyles = styled.div`
   }
 `;
 export const Layout: React.FC<Props> = ({ children }) => {
-  const [isDark, setIsDark] = React.useState(false);
-
+  const { theme, setTheme } = useTheme();
+  const toggleColor = () => {
+    const target = theme === Theme.Dark ? Theme.Light : Theme.Dark;
+    setTheme(target);
+    toggleColorMode(target);
+  };
   return (
     <>
       <Head>
@@ -102,7 +108,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
       </Head>
       <Header />
       <GitHub />
-      <ColorModeButton isDark={isDark} setIsDark={setIsDark} />
+      <ColorModeButton onClick={toggleColor} />
       <LayoutStyles className={ws.className}>{children}</LayoutStyles>
     </>
   );

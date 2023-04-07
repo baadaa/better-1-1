@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useTheme, Theme } from '@/contexts/ThemeContext';
+import { toggleColorMode } from '@/utils/utils';
 
 const ButtonStyles = styled.button`
   border: 1px solid var(--button-bg-colormode-border);
@@ -32,23 +34,11 @@ const ButtonStyles = styled.button`
 `;
 
 type ColorModeProps = {
-  isDark: boolean;
-  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
-export const ColorModeButton: React.FC<ColorModeProps> = ({
-  isDark,
-  setIsDark,
-}) => {
-  const makeDark = () => {
-    if (isDark) {
-      document.body.classList.remove('dark');
-    } else {
-      document.body.classList.add('dark');
-    }
-    setIsDark(!isDark);
-  };
+export const ColorModeButton: React.FC<ColorModeProps> = ({ onClick }) => {
   return (
-    <ButtonStyles data-type="colormode" onClick={makeDark}>
+    <ButtonStyles data-type="colormode" onClick={onClick}>
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386 388">
         <path
           d="M384 185c-4 6-8 12-14 17a91 91 0 1 1-78-154 14 14 0 0 1 14 21 63 63 0 0 0 9 77c14 14 35 21 55 18a14 14 0 0 1 14 21Z"

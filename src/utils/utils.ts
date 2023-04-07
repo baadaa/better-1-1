@@ -1,4 +1,7 @@
+import { Theme } from '@/contexts/ThemeContext';
 import { Item } from '@/types';
+
+export const isBrowser = typeof window !== 'undefined';
 
 export const pickRandomItems = (arr: Array<Item>, n: number) => {
   // Taken from https://stackoverflow.com/a/19270021/7216508
@@ -29,3 +32,9 @@ export const setLocalStorage = (key = '', data = ''): void => {
 
 export const localStorageIsAvailable = (data: string): boolean =>
   !!window.localStorage.getItem(data);
+
+export const toggleColorMode = (targetMode: Theme): void => {
+  if (isBrowser) {
+    document.body.className = targetMode === 'Dark' ? 'dark' : '';
+  }
+};
