@@ -4,7 +4,7 @@ const ButtonStyles = styled.button`
   border: 1px solid var(--button-bg-colormode-border);
   outline: none;
   position: fixed;
-  left: 1rem;
+  right: 1rem;
   top: calc(var(--header-height) + 1rem);
   width: auto;
   display: flex;

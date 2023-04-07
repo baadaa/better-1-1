@@ -163,24 +163,31 @@ body {
   --onboardingBg: var(--berry50);
   --onboardingText: var(--berry700);
   --onboardingBorder: var(--berry300);
+  --onboardingCardBorder: var(--berry600);
   --weeklyBg: var(--sky50);
   --weeklyText: var(--sky700);
   --weeklyBorder: var(--sky300);
+  --weeklyCardBorder: var(--sky600);
   --growthBg: var(--tomato50);
   --growthText: var(--tomato600);
   --growthBorder: var(--tomato300);
+  --growthCardBorder: var(--tomato600);
   --goalsBg: var(--cool50);
   --goalsText: var(--cool600);
   --goalsBorder: var(--cool300);
+  --goalsCardBorder: var(--cool600);
   --teamworkBg: var(--orange50);
   --teamworkText: var(--orange600);
   --teamworkBorder: var(--orange300);
+  --teamworkCardBorder: var(--orange600);
   --wellbeingBg: var(--grass50);
   --wellbeingText: var(--grass800);
   --wellbeingBorder: var(--grass300);
+  --wellbeingCardBorder: var(--grass600);
   --feedbackBg: var(--plum50);
   --feedbackText: var(--plum500);
   --feedbackBorder: var(--plum300);
+  --feedbackCardBorder: var(--plum600);
 
   --current-route: var(--lemon500);
   --main-button: var(--lemon500);
@@ -189,7 +196,7 @@ body {
   --pill-border: var(--lemon500);
   --pill-bg: white;
   --pill-active-bg: var(--lemon200);
-  --pill-text: var(--cool900);
+  --pill-text: var(--cool600);
   --pill-active-text: var(--cool900);
 
   --dropdown-border: var(--cool400);
@@ -213,31 +220,38 @@ body.dark {
 
   --card-bg: var(--cool800);
   --onboardingBg: var(--berry800);
-  --onboardingText: var(--berry400);
+  --onboardingText: var(--berry200);
   --onboardingBorder: var(--berry700);
+  --onboardingCardBorder: var(--berry400);
   --weeklyBg: var(--sky800);
-  --weeklyText: var(--sky400);
+  --weeklyText: var(--sky200);
   --weeklyBorder: var(--sky700);
+  --weeklyCardBorder: var(--sky400);
   --growthBg: var(--tomato800);
-  --growthText: var(--tomato400);
+  --growthText: var(--tomato200);
   --growthBorder: var(--tomato700);
+  --growthCardBorder: var(--tomato400);
   --goalsBg: var(--cool800);
-  --goalsText: var(--cool400);
+  --goalsText: var(--cool200);
   --goalsBorder: var(--cool700);
+  --goalsCardBorder: var(--cool400);
   --teamworkBg: var(--orange800);
-  --teamworkText: var(--orange400);
+  --teamworkText: var(--orange200);
   --teamworkBorder: var(--orange700);
+  --teamworkCardBorder: var(--orange400);
   --wellbeingBg: var(--grass800);
-  --wellbeingText: var(--grass400);
+  --wellbeingText: var(--grass200);
   --wellbeingBorder: var(--grass700);
+  --wellbeingCardBorder: var(--grass400);
   --feedbackBg: var(--plum800);
-  --feedbackText: var(--plum400);
-  --feedbackBorder: var(--plum700);
+  --feedbackText: var(--plum200);
+  --feedbackBorder: var(--plum600);
+  --feedbackCardBorder: var(--plum400);
 
   --pill-border: var(--lemon700);
   --pill-bg: var(--lemon900);
   --pill-active-bg: var(--lemon500);
-  --pill-text: white;
+  --pill-text: var(--lemon100);
   --pill-active-text: var(--lemon900);
 
   --colormode-sun: var(--lemon300);
@@ -247,7 +261,6 @@ body.dark {
   --button-bg-colormode-hover: var(--sky600);
   --github: var(--cool900);
   --about: var(--cool700);
-
 
 }
 a {

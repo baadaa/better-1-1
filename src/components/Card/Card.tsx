@@ -5,6 +5,7 @@ import { Tag } from './Tags';
 type CardStyleProps = {
   headBg: string;
   headText: string;
+  cardBorder: string;
 };
 const CardStyles = styled.article<CardStyleProps>`
   --spacing: 3rem;
@@ -19,7 +20,7 @@ const CardStyles = styled.article<CardStyleProps>`
   box-shadow: var(--base-shadow);
   border-radius: 0.4rem;
   position: relative;
-  border-left: 4px solid ${(props) => props.headText};
+  border-left: 4px solid ${(props) => props.cardBorder};
   &::before {
     content: attr(data-category);
     display: flex;
@@ -61,6 +62,7 @@ const Card: React.FC<CardProps> = ({ item }) => {
       data-category={category}
       headBg={headingColor.bg}
       headText={headingColor.text}
+      cardBorder={headingColor.cardBorder}
     >
       <h2>{content}</h2>
       <div className="tags">

@@ -87,8 +87,8 @@ export const Layout: React.FC<Props> = ({ children }) => {
         <link rel="icon" href="/barbecue.png" />
       </Head>
       <Header />
-      <ColorModeButton isDark={isDark} setIsDark={setIsDark} />
       <GitHub />
+      <ColorModeButton isDark={isDark} setIsDark={setIsDark} />
       <LayoutStyles className={ws.className}>{children}</LayoutStyles>
     </>
   );

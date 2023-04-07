@@ -4,9 +4,10 @@ const GitHubLink = styled.a`
   position: fixed;
   width: 6rem;
   top: var(--header-height);
-  right: 0;
+  left: 0;
   height: 6rem;
   z-index: 9;
+  transform: rotate(-90deg);
   &:hover svg {
     transform: scale(1.05);
   }
@@ -22,7 +23,7 @@ const GitHubLink = styled.a`
     fill: var(--about);
     color: var(--github);
     border: 0;
-    filter: drop-shadow(0px -1px 9px rgba(0, 0, 0, 0.25));
+    /* filter: drop-shadow(0px -1px 9px rgba(0, 0, 0, 0.25)); */
   }
   @keyframes octocat-wave {
     0%,
