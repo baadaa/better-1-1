@@ -4,6 +4,7 @@ import { Layout } from '@/components/Layout';
 import { Item, Category } from '@/types';
 import { shuffledPool } from '@/data/items';
 import { Selector, Pill } from '@/components/Buttons';
+import { isBrowser } from '@/utils/utils';
 
 export default function Home() {
   const [filter, setFilter] = useState<Category | 'all'>('all');
@@ -20,7 +21,6 @@ export default function Home() {
   const filterCards = (e: FormEvent<HTMLFormElement>) => {
     const target = e.target as HTMLFormElement;
     setFilter(target.value);
-    console.log(filter);
     if (target.value === 'all') return setPicks(shuffledPool);
     const filteredList = shuffledPool.filter(
       (item) => item.tags.indexOf(target.value) !== -1
@@ -30,6 +30,9 @@ export default function Home() {
   useEffect(() => {
     setPicks(shuffledPool);
   }, []);
+  useEffect(() => {
+    if (isBrowser) window.scrollTo({ top: 0 });
+  }, [filter]);
   return (
     <>
       <Layout title="Browse by Topics">
